@@ -1,0 +1,56 @@
+<div class="container">
+    <h1>
+        TODO List Converter
+    </h1>
+    <p align="justify">
+        I have been using <a href="http://www.codeproject.com/tools/todolist2.asp" target="_blank">
+            .dan.g.'s ToDoList
+        </a> for a very long time now. It's very easy for
+        me to track things that I have to do and also track the projects on which I am working.
+        But there was always a problem related to the creation of task list. My organization
+        uses Microsoft Project (like many other companies) for tracking projects and the
+        cost of development related to these projects. So, I had to make two tasklists,
+        one for the company and the other for myself. ToDoList is much more simpler when
+        compared to Microsoft Project and for daily tracking you don't need rocket applications
+        (like Microsoft Project) to do the tracking. So, I decided to go ahead and make
+        a converter for ToDoList, but the problem was Microsoft Project 2000 didn't support
+        XML, it supported only CVS or tab separated files. Since there wasn't a standard
+        format for the CSV or tab separated files, I chose to make two task lists. Microsoft
+        Project 2002 version had something different, it supported the whole task list to
+        be converted into an XML file and this XML format was standard. This gave me an
+        idea to convert the Microsoft Project 2002 task list to the ToDoList task list.
+        This online application is used to convert the Microsoft Project 2002/2003 xml into
+        <a href="http://www.codeproject.com/tools/todolist2.asp" target="_blank">.dan.g.'s Todo List XML</a>.
+        This utility was written by me, details of which can be found <a href="http://www.codeproject.com/dotnet/TODOListConverter.asp"
+                                                                         target="_blank">here</a>. I have also exposed
+        the functionality of this as a <a href="TodoListConverter.asmx" target="_blank">webservice</a>
+        for others to use this converter in there applications.
+    </p>
+    <p>
+        <table>
+            <tr>
+                <td>
+    <p>
+        MS Project 2002/2003 XML :
+    </p>
+    <textarea cols="50" name="msprojxml" rows="10"></textarea></td>
+    </tr>
+    <tr>
+        <td align="center">
+            <div id="todowaitImgHolder" style="display: none;"></div>
+            <div id="todobuttHolder">
+                <input onclick="ConvertMSProjXML(document.forms[0].msprojxml)" type="button" value="Convert !!!" />
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td id="todotxtarea" style="display: none">
+            <p>
+                Todo List XML :
+            </p>
+            <textarea cols="50" name="todoxml" rows="10"></textarea>
+        </td>
+    </tr>
+    </table>
+    </p>
+</div>

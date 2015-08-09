@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>
+        On-line Zip
+    </h1>
+    <p align="justify">
+        This application is used to create zip of files which are available on other servers.
+        This will help the users to download the files in a zip format so that the bandwidth
+        used is less. This application uses an open source zip library <a href="http://www.icsharpcode.net/OpenSource/SharpZipLib/"
+                                                                          target="_blank">SharpZipLib</a> to acheive compression. In future I might be
+        adding other formats of compression which this library supports. Zipping of file using upload method support a maximum of only 4 Mb.
+    </p>
+    <p>
+        <div class="form-group">
+            <label for="url">File URL :</label>
+            <input type="text" id="url" size="50" />
+            <p class="help-block">Paste any url of the exe download that needs to be zipped</p>
+            <label for="urlrename">Desired File Name :</label>
+            <input type="text" id="urlrename" size="40" />
+            <p class="help-block">Desired file name</p>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+	</p>
+    <input type="hidden" name="filename" />
+    <input type="hidden" name="method" value="zipup" />
+</div>
