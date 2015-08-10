@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" ng-controller="homeCtrl">
     <h1>
         On-line Zip
     </h1>
@@ -12,13 +12,18 @@
     <p>
         <div class="form-group">
             <label for="url">File URL :</label>
-            <input type="text" id="url" size="50" />
+            <input type="text" id="url" size="50" ng-model="url" />
             <p class="help-block">Paste any url of the exe download that needs to be zipped</p>
             <label for="urlrename">Desired File Name :</label>
-            <input type="text" id="urlrename" size="40" />
+            <input type="text" id="urlrename" size="40" ng-model="filename" />
             <p class="help-block">Desired file name</p>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <button ng-click="zipFile()" class="btn btn-default">Submit</button>
+        <br />
+        <div>
+            <label for="linkfile">{{downloadlabel}}</label>
+            <a ng-href="{{filelink}}" target="_blank" id="linkfile">{{downloadfilename}}</a>
+        </div>
 	</p>
     <input type="hidden" name="filename" />
     <input type="hidden" name="method" value="zipup" />
