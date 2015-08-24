@@ -15,7 +15,7 @@ controllers.navCtrl = function ($scope, $location) {
         $scope.todolistconvActiveTab = ($location.path() === "/todolistconv") ? "active" : "";
     }
     init();
-    
+
     $scope.setActiveTab = function (navigateTo) {
         $scope.homeActiveTab = (navigateTo == "/") ? "active" : "";
         $scope.onlinezipActiveTab = (navigateTo == "/onlinezip") ? "active" : "";
